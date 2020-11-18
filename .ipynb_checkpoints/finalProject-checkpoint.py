@@ -31,4 +31,8 @@ neigh.fit(X_train, y_train.ravel())
 
 prediction = neigh.predict(X_test)
 
-print('The accuracy of the KNN is',metrics.accuracy_score(prediction,y_test)*100, 'percent')
+plt.clf()
+plt.plot(prediction, y_test)
+plt.savefig('prediction.png')
+
+print('The accuracy of the KNN is',metrics.accuracy_score(prediction,y_test))
